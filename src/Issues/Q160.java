@@ -4,7 +4,38 @@ import Utils.InputFactory;
 import model.ListNode;
 
 public class Q160 implements IIssueTemplate {
-
+	
+	//3ms
+	public ListNode getIntersectionNode_II(ListNode headA, ListNode headB) {
+		
+		int l1 = getLength(headA);
+		int l2 = getLength(headB);
+		
+		while(l1 > l2){
+			headA = headA.next;
+			l1--;
+		}
+		while(l1 < l2){
+			headB = headB.next;
+			l2--;
+		}
+		
+		while(headA !=  headB){
+			headA = headA.next;
+			headB = headB.next;
+		}
+		
+		return headA;
+	}
+	
+	private int getLength(ListNode node){
+		if(node  == null){
+			return 0;
+		}
+		
+		return getLength(node.next)+1;
+	}
+// 2ms
 public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         
         if(headA== null || headB==null){

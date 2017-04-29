@@ -1,6 +1,7 @@
 package EntryPoint;
 
 import Issues.IIssueTemplate;
+import Issues.Q117;
 import Issues.Q366;
 import Issues.Q406;
 import Issues.Q484;
@@ -12,7 +13,7 @@ public class Starter {
 
 	public static void main(String[] args) {
 		
-		IIssueTemplate q = new Q494();
+		IIssueTemplate q = new Q117();
 		q.go();
 		System.out.println("Hello world");
 		

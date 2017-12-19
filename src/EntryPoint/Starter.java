@@ -9,7 +9,7 @@ public class Starter {
 	public static void main(String[] args) {
 
 
-		IIssueTemplate q = new Q681();
+		IIssueTemplate q = new Q346();
 
 		q.go();
 		
